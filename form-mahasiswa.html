@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIKA - form mahasiswa</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="assets/js/app.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>SIKA</h1>
+        <P>sistem informasi akademik</P>
+    </header>
+    <nav aria-label="Navigasi utama">
+        <ul>
+            <li><a href="index.html">Dashboard</a></li>
+            <li><a href="mahasiswa.html">profil mahasiswa</a></li>
+            <li><a href="form-mahasiswa.html">form mahasiswa</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>form data mahasiswa</h1>
+        <form action="#" method="post">
+        <div class="form-row">
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label for="nama">nama lengkap</label>
+                <input type="text">
+
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email">
+
+            </div>
+            <div class="form-group">
+                <label for="prodi">program studi</label>
+                <select id="prodi" name="prodi" required>
+                    <option value="">-- pilih --</option>
+                    <option value="IT">teknik informatika</option>
+                    <option value="SI">Sistem informasi</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="angkatan">angkatan</label>
+                <input type="number">
+            </div>
+        </div>
+            <fieldset>
+                <legend>status akademik</legend>
+                <input type="radio">
+
+                <label for="aktif">aktif</label>
+                <input type="radio">
+                <label for="nonaktif">nonktif</label>
+            </fieldset>
+            <button type="submit">simpan</button>
+            <button type="reset">reset</button>
+        </form>
+        <form id="fromMahasiwa"novalide>
+            <div class="from-group">
+                <label for="nim">NIM</label>
+                <input type="text" id="nim"name="nim"maxlength="8">
+                <small id="errorNim" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama"name="nama">
+                <small id="errorNama" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email">
+                <small id="errorEmail" class="error-message"></small>
+            </div>
+            <div class="form-group">
+                <label for="prodi">Program Studi</label>
+                <select id="prodi" name="prodi">
+                    <option value="">--Pilih Program Studi--</option>
+                    <option value="TI">Teknik Informatika</option>
+                    <option value="SI">Sistem Informasi</option>
+                </select>
+                <small id="errorProdi" class="error-message"></small>
+            </div>
+            <button type="submit">Simpan</button>
+            <p id="statusAplikasi" class="status">Siap digunakan</p>
+            <button type="button" id="btnCek">Cek Status</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy;2026 SIKA</p>
+    </footer>
+</body>
+
+</html>
